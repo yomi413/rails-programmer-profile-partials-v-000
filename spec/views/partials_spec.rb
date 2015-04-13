@@ -1,4 +1,5 @@
-require "spec_helper"
+require 'rails_helper'
+require 'spec_helper'
 
 describe "the navbar partial" do
   it "renders the navbar correctly" do
@@ -38,7 +39,7 @@ describe "the programmers index page" do
 end
 
 # BONUS: Create a partial that renders a single attribute of a programmer
-xdescribe "the attribute partial" do
+describe "the attribute partial" do
   let(:programmer) { FactoryGirl.create(:programmer) }
 
   it "renders any attribute of the programmer" do
