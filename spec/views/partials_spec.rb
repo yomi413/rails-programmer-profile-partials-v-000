@@ -25,6 +25,18 @@ describe "the programmer partial" do
 
 end
 
+describe "the programmers index page" do
+  programmers_index = File.open("app/views/programmers/index.html.erb", "r").read
+
+  it "does not use iteration to render the programmers" do
+    expect(programmers_index).to_not include(".each")
+  end
+
+  it "uses shorthand syntax for rendering the collection of programmers" do
+    expect(programmers_index).to include("<%= render @programmers %>")
+  end
+end
+
 # BONUS: Create a partial that renders a single attribute of a programmer
 xdescribe "the attribute partial" do
   let(:programmer) { FactoryGirl.create(:programmer) }
