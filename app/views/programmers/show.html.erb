@@ -12,8 +12,8 @@
 
   <div class="col-md-9 programmer-info">
 
-    <% @programmer.attributes_for_partial.each do |attribute| %>
-      <%= render partial: 'attribute', locals: {attribute: attribute, programmer: @programmer} %>
+    <% @programmer.locals_hash.each do |att, value| %>
+      <%= render partial: 'attribute', locals: {:att => att, :value => value}  %>
     <% end %>
 
     <p>
