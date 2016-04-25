@@ -1,6 +1,6 @@
 #Objectives
 1. Practice using partials.
-2. Use all the different techniques you've learned in this unit. 
+2. Use all the different techniques you've learned in this unit.
 3. Try a little metaprogramming.
 
 ## Overview
@@ -23,13 +23,11 @@ This part is a little more complex than the previous two steps, and will require
 
 When you look at `app/views/programmers/show.html.erb`, you will probably notice a pattern in how several of the attributes are rendered (specifically `home_country`, `quote`, and `claim_to_fame`. They each seem to be in a `<p>` tag with a bold capitalized label followed by the value for the given attribute. You'll want to render each of these with a single partial, `app/views/programmers/_attribute.html.erb`. Here are two hints to set you on the right track:
 
-1. You'll probably need to use the `send` method.
-2. You'll have to pass local variables to the partial to render it correctly for each attribute without hard-coding anything. Read the resources below to learn more about both of these!
-
+You'll have to pass local variables to the partial — check the resources below
+for more tips.
 
 ## Resources
 - [Rails Guides - Using Partials](http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials)
 - [Action View Partials](http://api.rubyonrails.org/classes/ActionView/PartialRenderer.html)
 - [Metaprogramming in Ruby](http://ruby-metaprogramming.rubylearning.com/html/ruby_metaprogramming_2.html) - See section 1.3.2 to learn about `send`.
 - [Stack Overflow - Passing Variables to a Partial](http://stackoverflow.com/questions/16242121/rails-4-passing-variable-to-partial) (see the first answer for a concise example)
-
