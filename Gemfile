@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'sqlite3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -48,10 +49,15 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'simplecov'
-  gem 'sqlite3'
+  gem 'database_cleaner'
   gem 'pry'
   gem 'guard-rspec', require: false
   gem 'thin'
+end
+
+group :production do
+  gem 'google-analytics-rails'
+  gem 'rails_12factor'
 end
 
 gem 'bootstrap-sass', '~> 3.1.1'
